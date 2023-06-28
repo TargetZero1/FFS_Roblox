@@ -1,0 +1,14 @@
+[package]
+name = "nightcycle/format-util"
+description = "A package used for formatting strings without having to remember special characters or regex"
+version = "1.0.0"
+authors = [ "CJ Oyer <coyer@nightcycle.us>",]
+realm = "shared"
+registry = "https://github.com/upliftgames/wally-index"
+exclude = [ "Packages", ".vscode",]
+
+[dependencies]
+NetworkUtil = "nightcycle/network-util@1.7.0"
+Signal = "nightcycle/signal@1.0.2"
+Maid = "nightcycle/maid@1.1.4"
+PhysicsUtil = "nightcycle/physics-util@1.3.0"

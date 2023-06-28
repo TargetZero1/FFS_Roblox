@@ -1,0 +1,18 @@
+[package]
+name = "nightcycle/gui-library"
+description = "A bunch of gui components"
+version = "2.0.1"
+authors = [ "CJ Oyer <coyer@nightcycle.us>",]
+realm = "shared"
+registry = "https://github.com/upliftgames/wally-index"
+exclude = [ "Packages", ".vscode",]
+
+[dependencies]
+ColdFusion = "nightcycle/cold-fusion@8.0.0"
+Signal = "nightcycle/signal@1.0.2"
+Maid = "nightcycle/maid@1.1.4"
+Synthetic = "nightcycle/synthetic@5.0.0"
+GeometryUtil = "nightcycle/geometry-util@1.1.1"
+TableUtil = "nightcycle/table-util@1.1.0"
+FormatUtil = "nightcycle/format-util@1.0.0"
+ServiceProxy = "nightcycle/service-proxy@1.0.0"

@@ -1,0 +1,533 @@
+version:
+  hotfix: 0
+  major: 1
+  minor: 0
+  patch: 7
+build:
+  midas_package_rbx_path: game/ReplicatedStorage/Packages/Midas
+  client_boot_script_path: out/Client/Analytics.client.lua
+  server_boot_script_path: out/Server/Analytics.server.lua
+  shared_event_tree_path: out/Shared/MidasEventTree.lua
+  shared_state_tree_path: out/Shared/MidasStateTree.lua
+monetization:
+  gamepasses:
+    DoubleBreadValue: 72142319
+    SuperKneader: 84834686
+    SuperOven: 84834761
+    SuperWrapper: 84834822
+    InfiniteTray: 84834888
+  products:
+    Donate5: 1296962698
+    Donate10: 1297008326
+    Donate25: 1296962478
+    Donate50: 1296962640
+    Donate100: 1296962786
+    Donate200: 1296962751
+    Donate500: 1296962602
+    DoubleBread2: 1296963344
+    DoubleBread5: 1296963390
+    DoubleBread10: 1296963438
+    DoubleBread15: 1296963478
+    DoubleBread30: 1296963521
+    DoubleBread60: 1296963574
+    ServerDoubleBread2: 1296964143
+    ServerDoubleBread5: 1296964228
+    ServerDoubleBread10: 1296964267
+    ServerDoubleBread15: 1296964306
+    ServerDoubleBread30: 1296964351
+    ServerDoubleBread60: 1296964418
+    Cash5k: 1316662852
+    Cash10k: 1316663047
+    Cash50k: 1316663368
+    Cash100k: 1316663558
+    Cash250k: 1316663723
+    Cash500k: 1316663884
+templates:
+  character: false
+  chat: true
+  client_performance: false
+  demographics: true
+  group:
+    NSG: 11827920
+  market: true
+  population: true
+  server_performance: true
+tree:
+  Duration: integer
+  Id:
+    Place: string
+    Session: string
+    User: string
+  Index:
+    Event: integer
+    Total: integer
+  IsStudio: boolean
+  Version:
+    Build: integer
+    Major: integer
+    Minor: integer
+    Patch: integer
+  GameplayEvent:
+    Explore: boolean
+    Obby:
+      Easy: boolean
+      Hard: boolean
+    PetManagement: boolean
+    PetHatch: boolean
+    UpgradingTycoon: boolean
+    RunningStation: boolean
+    IdleTycoon: boolean
+    VisitTycoon: boolean
+  Cash: integer
+  DayReward: integer
+  Rebirths: 
+    Count: integer
+    IsUnlocked: boolean
+  Onboarding:
+    Knead:
+      Order: integer?
+      Completed: integer?
+      Total: interger?
+    Bake:
+      Order: integer?
+      Completed: integer?
+      Total: interger?
+    Wrap:
+      Order: integer?
+      Completed: integer?
+      Total: interger?
+    Collect: 
+      Order: integer?
+      Completed: integer?
+      Total: interger?
+    Deposit: 
+      Order: integer?
+      Completed: integer?
+      Total: interger?
+    Deliver:
+      Order: integer?
+      Completed: integer?
+      Total: interger?
+    Hatch:
+      Order: integer?
+      Completed: integer?
+      Total: interger?
+    Assign:
+      Order: integer?
+      Completed: integer?
+      Total: interger?
+  Multiplier:
+    Total: double
+    Additions:
+      RebirthCount: double
+      IsInGroup: double
+    Weights:
+      ActiveTimer: double
+      DoubleBread: double
+      GlobalTimer: double
+      TimedReward: double
+  Timer:
+    Level1:
+    - Available
+    - Locked
+    - Reloading
+    Level2:
+    - Available
+    - Locked
+    - Reloading
+    Level3:
+    - Available
+    - Locked
+    - Reloading   
+    Level4:
+    - Available
+    - Locked
+    - Reloading 
+    Level5:
+    - Available
+    - Locked
+    - Reloading       
+    Level6:
+    - Available
+    - Locked
+    - Reloading      
+    Level7:
+    - Available
+    - Locked
+    - Reloading      
+    Level8:
+    - Available
+    - Locked
+    - Reloading     
+    Level9:
+    - Available
+    - Locked
+    - Reloading    
+    Level10:
+    - Available
+    - Locked
+    - Reloading       
+    Level11:
+    - Available
+    - Locked
+    - Reloading 
+    Level12:
+    - Available
+    - Locked
+    - Reloading          
+  PositionPercent:
+    X: integer?
+    Z: integer?
+  Pets:
+    Cat_Silver_1: integer?
+    Cat_Gold_1: integer?
+    Cat_Diamond_1: integer?
+    Cat_Normal_1: integer?
+    Dog_Silver_1: integer?
+    Dog_Gold_1: integer?
+    Dog_Diamond_1: integer?
+    Dog_Normal_1: integer?
+    Mouse_Silver_1: integer?
+    Mouse_Gold_1: integer?
+    Mouse_Diamond_1: integer?
+    Mouse_Normal_1: integer?
+    Bird_Silver_1: integer?
+    Bird_Gold_1: integer?
+    Bird_Diamond_1: integer?
+    Bird_Normal_1: integer?
+    Cat_Silver_2: integer?
+    Cat_Gold_2: integer?
+    Cat_Diamond_2: integer?
+    Cat_Normal_2: integer?
+    Dog_Silver_2: integer?
+    Dog_Gold_2: integer?
+    Dog_Diamond_2: integer?
+    Dog_Normal_2: integer?
+    Mouse_Silver_2: integer?
+    Mouse_Gold_2: integer?
+    Mouse_Diamond_2: integer?
+    Mouse_Normal_2: integer?
+    Bird_Silver_2: integer?
+    Bird_Gold_2: integer?
+    Bird_Diamond_2: integer?
+    Bird_Normal_2: integer?
+    Cat_Silver_3: integer?
+    Cat_Gold_3: integer?
+    Cat_Diamond_3: integer?
+    Cat_Normal_3: integer?
+    Dog_Silver_3: integer?
+    Dog_Gold_3: integer?
+    Dog_Diamond_3: integer?
+    Dog_Normal_3: integer?
+    Mouse_Silver_3: integer?
+    Mouse_Gold_3: integer?
+    Mouse_Diamond_3: integer?
+    Mouse_Normal_3: integer?
+    Bird_Silver_3: integer?
+    Bird_Gold_3: integer?
+    Bird_Diamond_3: integer?
+    Bird_Normal_3: integer?
+    Cat_Silver_4: integer?
+    Cat_Gold_4: integer?
+    Cat_Diamond_4: integer?
+    Cat_Normal_4: integer?
+    Dog_Silver_4: integer?
+    Dog_Gold_4: integer?
+    Dog_Diamond_4: integer?
+    Dog_Normal_4: integer?
+    Mouse_Silver_4: integer?
+    Mouse_Gold_4: integer?
+    Mouse_Diamond_4: integer?
+    Mouse_Normal_4: integer?
+    Bird_Silver_4: integer?
+    Bird_Gold_4: integer?
+    Bird_Diamond_4: integer?
+    Bird_Normal_4: integer?
+    Cat_Silver_5: integer?
+    Cat_Gold_5: integer?
+    Cat_Diamond_5: integer?
+    Cat_Normal_5: integer?
+    Dog_Silver_5: integer?
+    Dog_Gold_5: integer?
+    Dog_Diamond_5: integer?
+    Dog_Normal_5: integer?
+    Mouse_Silver_5: integer?
+    Mouse_Gold_5: integer?
+    Mouse_Diamond_5: integer?
+    Mouse_Normal_5: integer?
+    Bird_Silver_5: integer?
+    Bird_Gold_5: integer?
+    Bird_Diamond_5: integer?
+    Bird_Normal_5: integer?                      
+  Tycoon:
+    Truck:
+      DeliveryCount: integer
+      LastDelivery:
+        Count: integer?
+        Value: integer?
+    Windmill:
+      Level:
+        Value: integer?
+        Recharge: integer?
+    Wrapper:
+      Level:
+        Multiplier: integer?
+        Recharge: integer?
+      PetBalanceId:
+      - None
+      - Cat_Silver_1
+      - Cat_Gold_1
+      - Cat_Diamond_1
+      - Cat_Normal_1
+      - Dog_Silver_1
+      - Dog_Gold_1
+      - Dog_Diamond_1
+      - Dog_Normal_1
+      - Mouse_Silver_1
+      - Mouse_Gold_1
+      - Mouse_Diamond_1
+      - Mouse_Normal_1
+      - Bird_Silver_1
+      - Bird_Gold_1
+      - Bird_Diamond_1
+      - Bird_Normal_1
+      - Cat_Silver_2
+      - Cat_Gold_2
+      - Cat_Diamond_2
+      - Cat_Normal_2
+      - Dog_Silver_2
+      - Dog_Gold_2
+      - Dog_Diamond_2
+      - Dog_Normal_2
+      - Mouse_Silver_2
+      - Mouse_Gold_2
+      - Mouse_Diamond_2
+      - Mouse_Normal_2
+      - Bird_Silver_2
+      - Bird_Gold_2
+      - Bird_Diamond_2
+      - Bird_Normal_2
+      - Cat_Silver_3
+      - Cat_Gold_3
+      - Cat_Diamond_3
+      - Cat_Normal_3
+      - Dog_Silver_3
+      - Dog_Gold_3
+      - Dog_Diamond_3
+      - Dog_Normal_3
+      - Mouse_Silver_3
+      - Mouse_Gold_3
+      - Mouse_Diamond_3
+      - Mouse_Normal_3
+      - Bird_Silver_3
+      - Bird_Gold_3
+      - Bird_Diamond_3
+      - Bird_Normal_3
+      - Cat_Silver_4
+      - Cat_Gold_4
+      - Cat_Diamond_4
+      - Cat_Normal_4
+      - Dog_Silver_4
+      - Dog_Gold_4
+      - Dog_Diamond_4
+      - Dog_Normal_4
+      - Mouse_Silver_4
+      - Mouse_Gold_4
+      - Mouse_Diamond_4
+      - Mouse_Normal_4
+      - Bird_Silver_4
+      - Bird_Gold_4
+      - Bird_Diamond_4
+      - Bird_Normal_4
+      - Cat_Silver_5
+      - Cat_Gold_5
+      - Cat_Diamond_5
+      - Cat_Normal_5
+      - Dog_Silver_5
+      - Dog_Gold_5
+      - Dog_Diamond_5
+      - Dog_Normal_5
+      - Mouse_Silver_5
+      - Mouse_Gold_5
+      - Mouse_Diamond_5
+      - Mouse_Normal_5
+      - Bird_Silver_5
+      - Bird_Gold_5
+      - Bird_Diamond_5
+      - Bird_Normal_5
+    Kneader:
+      Level:
+        Multiplier: integer?
+        Recharge: integer?
+      PetBalanceId:
+      - None
+      - Cat_Silver_1
+      - Cat_Gold_1
+      - Cat_Diamond_1
+      - Cat_Normal_1
+      - Dog_Silver_1
+      - Dog_Gold_1
+      - Dog_Diamond_1
+      - Dog_Normal_1
+      - Mouse_Silver_1
+      - Mouse_Gold_1
+      - Mouse_Diamond_1
+      - Mouse_Normal_1
+      - Bird_Silver_1
+      - Bird_Gold_1
+      - Bird_Diamond_1
+      - Bird_Normal_1
+      - Cat_Silver_2
+      - Cat_Gold_2
+      - Cat_Diamond_2
+      - Cat_Normal_2
+      - Dog_Silver_2
+      - Dog_Gold_2
+      - Dog_Diamond_2
+      - Dog_Normal_2
+      - Mouse_Silver_2
+      - Mouse_Gold_2
+      - Mouse_Diamond_2
+      - Mouse_Normal_2
+      - Bird_Silver_2
+      - Bird_Gold_2
+      - Bird_Diamond_2
+      - Bird_Normal_2
+      - Cat_Silver_3
+      - Cat_Gold_3
+      - Cat_Diamond_3
+      - Cat_Normal_3
+      - Dog_Silver_3
+      - Dog_Gold_3
+      - Dog_Diamond_3
+      - Dog_Normal_3
+      - Mouse_Silver_3
+      - Mouse_Gold_3
+      - Mouse_Diamond_3
+      - Mouse_Normal_3
+      - Bird_Silver_3
+      - Bird_Gold_3
+      - Bird_Diamond_3
+      - Bird_Normal_3
+      - Cat_Silver_4
+      - Cat_Gold_4
+      - Cat_Diamond_4
+      - Cat_Normal_4
+      - Dog_Silver_4
+      - Dog_Gold_4
+      - Dog_Diamond_4
+      - Dog_Normal_4
+      - Mouse_Silver_4
+      - Mouse_Gold_4
+      - Mouse_Diamond_4
+      - Mouse_Normal_4
+      - Bird_Silver_4
+      - Bird_Gold_4
+      - Bird_Diamond_4
+      - Bird_Normal_4
+      - Cat_Silver_5
+      - Cat_Gold_5
+      - Cat_Diamond_5
+      - Cat_Normal_5
+      - Dog_Silver_5
+      - Dog_Gold_5
+      - Dog_Diamond_5
+      - Dog_Normal_5
+      - Mouse_Silver_5
+      - Mouse_Gold_5
+      - Mouse_Diamond_5
+      - Mouse_Normal_5
+      - Bird_Silver_5
+      - Bird_Gold_5
+      - Bird_Diamond_5
+      - Bird_Normal_5
+    Oven:
+      Level:
+        Value: integer?
+        Recharge: integer?
+      PetBalanceId:
+      - None
+      - Cat_Silver_1
+      - Cat_Gold_1
+      - Cat_Diamond_1
+      - Cat_Normal_1
+      - Dog_Silver_1
+      - Dog_Gold_1
+      - Dog_Diamond_1
+      - Dog_Normal_1
+      - Mouse_Silver_1
+      - Mouse_Gold_1
+      - Mouse_Diamond_1
+      - Mouse_Normal_1
+      - Bird_Silver_1
+      - Bird_Gold_1
+      - Bird_Diamond_1
+      - Bird_Normal_1
+      - Cat_Silver_2
+      - Cat_Gold_2
+      - Cat_Diamond_2
+      - Cat_Normal_2
+      - Dog_Silver_2
+      - Dog_Gold_2
+      - Dog_Diamond_2
+      - Dog_Normal_2
+      - Mouse_Silver_2
+      - Mouse_Gold_2
+      - Mouse_Diamond_2
+      - Mouse_Normal_2
+      - Bird_Silver_2
+      - Bird_Gold_2
+      - Bird_Diamond_2
+      - Bird_Normal_2
+      - Cat_Silver_3
+      - Cat_Gold_3
+      - Cat_Diamond_3
+      - Cat_Normal_3
+      - Dog_Silver_3
+      - Dog_Gold_3
+      - Dog_Diamond_3
+      - Dog_Normal_3
+      - Mouse_Silver_3
+      - Mouse_Gold_3
+      - Mouse_Diamond_3
+      - Mouse_Normal_3
+      - Bird_Silver_3
+      - Bird_Gold_3
+      - Bird_Diamond_3
+      - Bird_Normal_3
+      - Cat_Silver_4
+      - Cat_Gold_4
+      - Cat_Diamond_4
+      - Cat_Normal_4
+      - Dog_Silver_4
+      - Dog_Gold_4
+      - Dog_Diamond_4
+      - Dog_Normal_4
+      - Mouse_Silver_4
+      - Mouse_Gold_4
+      - Mouse_Diamond_4
+      - Mouse_Normal_4
+      - Bird_Silver_4
+      - Bird_Gold_4
+      - Bird_Diamond_4
+      - Bird_Normal_4
+      - Cat_Silver_5
+      - Cat_Gold_5
+      - Cat_Diamond_5
+      - Cat_Normal_5
+      - Dog_Silver_5
+      - Dog_Gold_5
+      - Dog_Diamond_5
+      - Dog_Normal_5
+      - Mouse_Silver_5
+      - Mouse_Gold_5
+      - Mouse_Diamond_5
+      - Mouse_Normal_5
+      - Bird_Silver_5
+      - Bird_Gold_5
+      - Bird_Diamond_5
+      - Bird_Normal_5
+    Rack:
+      Level:
+        Storage: integer?
+

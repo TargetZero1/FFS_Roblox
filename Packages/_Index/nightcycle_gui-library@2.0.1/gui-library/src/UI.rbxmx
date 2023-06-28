@@ -1,0 +1,973 @@
+<roblox version="4">
+  <Item class="SoundGroup" referent="0">
+    <Properties>
+      <string name="Name">UI</string>
+    </Properties>
+    <Item class="SoundGroup" referent="1">
+      <Properties>
+        <string name="Name">Lock</string>
+      </Properties>
+      <Item class="Sound" referent="2">
+        <Properties>
+          <string name="Name">A</string>
+          <string name="SoundId">rbxassetid://11721703117</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="3">
+        <Properties>
+          <string name="Name">B</string>
+          <string name="SoundId">rbxassetid://11721703167</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="4">
+      <Properties>
+        <string name="Name">Navigation</string>
+      </Properties>
+      <Item class="Sound" referent="5">
+        <Properties>
+          <string name="Name">Completion</string>
+          <string name="SoundId">rbxassetid://12017250054</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="6">
+        <Properties>
+          <string name="Name">Unavailable</string>
+          <string name="SoundId">rbxassetid://12017250423</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="7">
+        <Properties>
+          <string name="Name">HoverTap</string>
+          <string name="SoundId">rbxassetid://12017250101</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="8">
+        <Properties>
+          <string name="Name">Cancel</string>
+          <string name="SoundId">rbxassetid://12017250007</string>
+        </Properties>
+      </Item>
+      <Item class="SoundGroup" referent="9">
+        <Properties>
+          <string name="Name">Transition</string>
+        </Properties>
+        <Item class="Sound" referent="10">
+          <Properties>
+            <string name="Name">Left</string>
+            <string name="SoundId">rbxassetid://12017250337</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="11">
+          <Properties>
+            <string name="Name">Right</string>
+            <string name="SoundId">rbxassetid://12017250380</string>
+          </Properties>
+        </Item>
+        <Item class="SoundGroup" referent="12">
+          <Properties>
+            <string name="Name">Forward</string>
+          </Properties>
+          <Item class="Sound" referent="13">
+            <Properties>
+              <string name="Name">A</string>
+              <string name="SoundId">rbxassetid://12017250251</string>
+            </Properties>
+          </Item>
+          <Item class="Sound" referent="14">
+            <Properties>
+              <string name="Name">B</string>
+              <string name="SoundId">rbxassetid://12017250293</string>
+            </Properties>
+          </Item>
+        </Item>
+        <Item class="SoundGroup" referent="15">
+          <Properties>
+            <string name="Name">Backward</string>
+          </Properties>
+          <Item class="Sound" referent="16">
+            <Properties>
+              <string name="Name">A</string>
+              <string name="SoundId">rbxassetid://12017250142</string>
+            </Properties>
+          </Item>
+          <Item class="Sound" referent="17">
+            <Properties>
+              <string name="Name">B</string>
+              <string name="SoundId">rbxassetid://12017250190</string>
+            </Properties>
+          </Item>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="18">
+      <Properties>
+        <string name="Name">Cancel</string>
+      </Properties>
+      <Item class="Sound" referent="19">
+        <Properties>
+          <string name="Name">A</string>
+          <string name="SoundId">rbxassetid://11721871279</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="20">
+        <Properties>
+          <string name="Name">B</string>
+          <string name="SoundId">rbxassetid://11721871313</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="21">
+      <Properties>
+        <string name="Name">Scroll</string>
+      </Properties>
+      <Item class="Sound" referent="22">
+        <Properties>
+          <string name="Name">Back</string>
+          <string name="SoundId">rbxassetid://12017251217</string>
+        </Properties>
+      </Item>
+      <Item class="SoundGroup" referent="23">
+        <Properties>
+          <string name="Name">Default</string>
+        </Properties>
+        <Item class="Sound" referent="24">
+          <Properties>
+            <string name="Name">K</string>
+            <string name="SoundId">rbxassetid://12017251752</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="25">
+          <Properties>
+            <string name="Name">L</string>
+            <string name="SoundId">rbxassetid://12017251805</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="26">
+          <Properties>
+            <string name="Name">M</string>
+            <string name="SoundId">rbxassetid://12017251851</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="27">
+          <Properties>
+            <string name="Name">N</string>
+            <string name="SoundId">rbxassetid://12017251900</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="28">
+          <Properties>
+            <string name="Name">G</string>
+            <string name="SoundId">rbxassetid://12017251538</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="29">
+          <Properties>
+            <string name="Name">H</string>
+            <string name="SoundId">rbxassetid://12017251588</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="30">
+          <Properties>
+            <string name="Name">I</string>
+            <string name="SoundId">rbxassetid://12017251648</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="31">
+          <Properties>
+            <string name="Name">J</string>
+            <string name="SoundId">rbxassetid://12017251709</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="32">
+          <Properties>
+            <string name="Name">C</string>
+            <string name="SoundId">rbxassetid://12017251388</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="33">
+          <Properties>
+            <string name="Name">D</string>
+            <string name="SoundId">rbxassetid://12017251433</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="34">
+          <Properties>
+            <string name="Name">E</string>
+            <string name="SoundId">rbxassetid://12017251453</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="35">
+          <Properties>
+            <string name="Name">F</string>
+            <string name="SoundId">rbxassetid://12017251495</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="36">
+          <Properties>
+            <string name="Name">O</string>
+            <string name="SoundId">rbxassetid://12017251941</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="37">
+          <Properties>
+            <string name="Name">A</string>
+            <string name="SoundId">rbxassetid://12017251271</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="38">
+          <Properties>
+            <string name="Name">B</string>
+            <string name="SoundId">rbxassetid://12017251334</string>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="39">
+      <Properties>
+        <string name="Name">Beep</string>
+      </Properties>
+      <Item class="Sound" referent="40">
+        <Properties>
+          <string name="Name">C</string>
+          <string name="SoundId">rbxassetid://11721870552</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="41">
+        <Properties>
+          <string name="Name">D</string>
+          <string name="SoundId">rbxassetid://11721870575</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="42">
+        <Properties>
+          <string name="Name">E</string>
+          <string name="SoundId">rbxassetid://11721870599</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="43">
+        <Properties>
+          <string name="Name">F</string>
+          <string name="SoundId">rbxassetid://11721870631</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="44">
+        <Properties>
+          <string name="Name">A</string>
+          <string name="SoundId">rbxassetid://11721870511</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="45">
+        <Properties>
+          <string name="Name">B</string>
+          <string name="SoundId">rbxassetid://11721870530</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="46">
+        <Properties>
+          <string name="Name">K</string>
+          <string name="SoundId">rbxassetid://11721870792</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="47">
+        <Properties>
+          <string name="Name">L</string>
+          <string name="SoundId">rbxassetid://11721870831</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="48">
+        <Properties>
+          <string name="Name">M</string>
+          <string name="SoundId">rbxassetid://11721870885</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="49">
+        <Properties>
+          <string name="Name">N</string>
+          <string name="SoundId">rbxassetid://11721870938</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="50">
+        <Properties>
+          <string name="Name">G</string>
+          <string name="SoundId">rbxassetid://11721870669</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="51">
+        <Properties>
+          <string name="Name">H</string>
+          <string name="SoundId">rbxassetid://11721870700</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="52">
+        <Properties>
+          <string name="Name">I</string>
+          <string name="SoundId">rbxassetid://11721870723</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="53">
+        <Properties>
+          <string name="Name">J</string>
+          <string name="SoundId">rbxassetid://11721870748</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="54">
+        <Properties>
+          <string name="Name">S</string>
+          <string name="SoundId">rbxassetid://11721871092</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="55">
+        <Properties>
+          <string name="Name">O</string>
+          <string name="SoundId">rbxassetid://11721870981</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="56">
+        <Properties>
+          <string name="Name">P</string>
+          <string name="SoundId">rbxassetid://11721871021</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="57">
+        <Properties>
+          <string name="Name">Q</string>
+          <string name="SoundId">rbxassetid://11721871044</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="58">
+        <Properties>
+          <string name="Name">R</string>
+          <string name="SoundId">rbxassetid://11721871071</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="59">
+      <Properties>
+        <string name="Name">Notification</string>
+      </Properties>
+      <Item class="Sound" referent="60">
+        <Properties>
+          <string name="Name">Ambient</string>
+          <string name="SoundId">rbxassetid://12017250467</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="61">
+        <Properties>
+          <string name="Name">Intensity</string>
+          <string name="SoundId">rbxassetid://12017250574</string>
+        </Properties>
+      </Item>
+      <Item class="SoundGroup" referent="62">
+        <Properties>
+          <string name="Name">Simple</string>
+        </Properties>
+        <Item class="Sound" referent="63">
+          <Properties>
+            <string name="Name">A</string>
+            <string name="SoundId">rbxassetid://12017250613</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="64">
+          <Properties>
+            <string name="Name">B</string>
+            <string name="SoundId">rbxassetid://12017250646</string>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="SoundGroup" referent="65">
+        <Properties>
+          <string name="Name">Decorative</string>
+        </Properties>
+        <Item class="Sound" referent="66">
+          <Properties>
+            <string name="Name">A</string>
+            <string name="SoundId">rbxassetid://12017250503</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="67">
+          <Properties>
+            <string name="Name">B</string>
+            <string name="SoundId">rbxassetid://12017250535</string>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="68">
+      <Properties>
+        <string name="Name">Button</string>
+      </Properties>
+      <Item class="SoundGroup" referent="69">
+        <Properties>
+          <string name="Name">Movement</string>
+        </Properties>
+        <Item class="Sound" referent="70">
+          <Properties>
+            <string name="Name">C</string>
+            <string name="SoundId">rbxassetid://11721871246</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="71">
+          <Properties>
+            <string name="Name">A</string>
+            <string name="SoundId">rbxassetid://11721871174</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="72">
+          <Properties>
+            <string name="Name">B</string>
+            <string name="SoundId">rbxassetid://11721871207</string>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="SoundGroup" referent="73">
+        <Properties>
+          <string name="Name">Click</string>
+        </Properties>
+        <Item class="Sound" referent="74">
+          <Properties>
+            <string name="Name">C</string>
+            <string name="SoundId">rbxassetid://11721871152</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="75">
+          <Properties>
+            <string name="Name">A</string>
+            <string name="SoundId">rbxassetid://11721871112</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="76">
+          <Properties>
+            <string name="Name">B</string>
+            <string name="SoundId">rbxassetid://11721871130</string>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="77">
+      <Properties>
+        <string name="Name">Tap</string>
+      </Properties>
+      <Item class="Sound" referent="78">
+        <Properties>
+          <string name="Name">C</string>
+          <string name="SoundId">rbxassetid://12017252219</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="79">
+        <Properties>
+          <string name="Name">D</string>
+          <string name="SoundId">rbxassetid://12017252262</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="80">
+        <Properties>
+          <string name="Name">A</string>
+          <string name="SoundId">rbxassetid://11721703215</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="81">
+        <Properties>
+          <string name="Name">B</string>
+          <string name="SoundId">rbxassetid://12017252159</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="82">
+      <Properties>
+        <string name="Name">State</string>
+      </Properties>
+      <Item class="Sound" referent="83">
+        <Properties>
+          <string name="Name">A</string>
+          <string name="SoundId">rbxassetid://12017252061</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="84">
+        <Properties>
+          <string name="Name">B</string>
+          <string name="SoundId">rbxassetid://12017252113</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Sound" referent="85">
+      <Properties>
+        <string name="Name">Loading</string>
+        <string name="SoundId">rbxassetid://12017249966</string>
+      </Properties>
+    </Item>
+    <Item class="SoundGroup" referent="86">
+      <Properties>
+        <string name="Name">Stamp</string>
+      </Properties>
+      <Item class="Sound" referent="87">
+        <Properties>
+          <string name="Name">A</string>
+          <string name="SoundId">rbxassetid://12017252023</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="88">
+      <Properties>
+        <string name="Name">Click</string>
+      </Properties>
+      <Item class="Sound" referent="89">
+        <Properties>
+          <string name="Name">C</string>
+          <string name="SoundId">rbxassetid://11721871401</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="90">
+        <Properties>
+          <string name="Name">D</string>
+          <string name="SoundId">rbxassetid://11721871417</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="91">
+        <Properties>
+          <string name="Name">E</string>
+          <string name="SoundId">rbxassetid://11721871439</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="92">
+        <Properties>
+          <string name="Name">F</string>
+          <string name="SoundId">rbxassetid://11721871456</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="93">
+        <Properties>
+          <string name="Name">A</string>
+          <string name="SoundId">rbxassetid://11721871340</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="94">
+        <Properties>
+          <string name="Name">B</string>
+          <string name="SoundId">rbxassetid://11721871374</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="95">
+        <Properties>
+          <string name="Name">K</string>
+          <string name="SoundId">rbxassetid://11721871612</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="96">
+        <Properties>
+          <string name="Name">L</string>
+          <string name="SoundId">rbxassetid://11721871638</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="97">
+        <Properties>
+          <string name="Name">M</string>
+          <string name="SoundId">rbxassetid://11721871662</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="98">
+        <Properties>
+          <string name="Name">N</string>
+          <string name="SoundId">rbxassetid://11721871679</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="99">
+        <Properties>
+          <string name="Name">G</string>
+          <string name="SoundId">rbxassetid://11721871481</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="100">
+        <Properties>
+          <string name="Name">H</string>
+          <string name="SoundId">rbxassetid://11721871515</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="101">
+        <Properties>
+          <string name="Name">I</string>
+          <string name="SoundId">rbxassetid://11721871547</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="102">
+        <Properties>
+          <string name="Name">J</string>
+          <string name="SoundId">rbxassetid://11721871587</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="103">
+        <Properties>
+          <string name="Name">O</string>
+          <string name="SoundId">rbxassetid://11721871703</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="104">
+        <Properties>
+          <string name="Name">P</string>
+          <string name="SoundId">rbxassetid://11721871734</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="105">
+        <Properties>
+          <string name="Name">Q</string>
+          <string name="SoundId">rbxassetid://11721871795</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Sound" referent="106">
+      <Properties>
+        <string name="Name">Shutter</string>
+        <string name="SoundId">rbxassetid://12017251979</string>
+      </Properties>
+    </Item>
+    <Item class="SoundGroup" referent="107">
+      <Properties>
+        <string name="Name">Error</string>
+      </Properties>
+      <Item class="Sound" referent="108">
+        <Properties>
+          <string name="Name">C</string>
+          <string name="SoundId">rbxassetid://11721872405</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="109">
+        <Properties>
+          <string name="Name">D</string>
+          <string name="SoundId">rbxassetid://11721872450</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="110">
+        <Properties>
+          <string name="Name">A</string>
+          <string name="SoundId">rbxassetid://11721872338</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="111">
+        <Properties>
+          <string name="Name">B</string>
+          <string name="SoundId">rbxassetid://11721872367</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="112">
+      <Properties>
+        <string name="Name">Retro</string>
+      </Properties>
+      <Item class="SoundGroup" referent="113">
+        <Properties>
+          <string name="Name">Beep</string>
+        </Properties>
+        <Item class="Sound" referent="114">
+          <Properties>
+            <string name="Name">C</string>
+            <string name="SoundId">rbxassetid://12017250770</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="115">
+          <Properties>
+            <string name="Name">D</string>
+            <string name="SoundId">rbxassetid://12017250800</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="116">
+          <Properties>
+            <string name="Name">E</string>
+            <string name="SoundId">rbxassetid://12017250830</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="117">
+          <Properties>
+            <string name="Name">F</string>
+            <string name="SoundId">rbxassetid://12017250872</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="118">
+          <Properties>
+            <string name="Name">A</string>
+            <string name="SoundId">rbxassetid://12017250711</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="119">
+          <Properties>
+            <string name="Name">B</string>
+            <string name="SoundId">rbxassetid://12017250740</string>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Sound" referent="120">
+        <Properties>
+          <string name="Name">Signal</string>
+          <string name="SoundId">rbxassetid://12017251175</string>
+        </Properties>
+      </Item>
+      <Item class="SoundGroup" referent="121">
+        <Properties>
+          <string name="Name">ComputerCode</string>
+        </Properties>
+        <Item class="Sound" referent="122">
+          <Properties>
+            <string name="Name">C</string>
+            <string name="SoundId">rbxassetid://12017250966</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="123">
+          <Properties>
+            <string name="Name">D</string>
+            <string name="SoundId">rbxassetid://12017250998</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="124">
+          <Properties>
+            <string name="Name">E</string>
+            <string name="SoundId">rbxassetid://12017251019</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="125">
+          <Properties>
+            <string name="Name">F</string>
+            <string name="SoundId">rbxassetid://12017251047</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="126">
+          <Properties>
+            <string name="Name">G</string>
+            <string name="SoundId">rbxassetid://12017251104</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="127">
+          <Properties>
+            <string name="Name">H</string>
+            <string name="SoundId">rbxassetid://12017251137</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="128">
+          <Properties>
+            <string name="Name">A</string>
+            <string name="SoundId">rbxassetid://12017250915</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="129">
+          <Properties>
+            <string name="Name">B</string>
+            <string name="SoundId">rbxassetid://12017250940</string>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="130">
+      <Properties>
+        <string name="Name">Confirm</string>
+      </Properties>
+      <Item class="Sound" referent="131">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_02</string>
+          <string name="SoundId">rbxassetid://11721871923</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="132">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_04</string>
+          <string name="SoundId">rbxassetid://11721871988</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="133">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_01</string>
+          <string name="SoundId">rbxassetid://11721871851</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="134">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_15</string>
+          <string name="SoundId">rbxassetid://11721872301</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="135">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_07</string>
+          <string name="SoundId">rbxassetid://11721872105</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="136">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_06</string>
+          <string name="SoundId">rbxassetid://11721872063</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="137">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_10</string>
+          <string name="SoundId">rbxassetid://11721872157</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="138">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_16</string>
+          <string name="SoundId">rbxassetid://11721872320</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="139">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_05</string>
+          <string name="SoundId">rbxassetid://11721872027</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="140">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_03</string>
+          <string name="SoundId">rbxassetid://11721871954</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="141">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_13</string>
+          <string name="SoundId">rbxassetid://11721872263</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="142">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_14</string>
+          <string name="SoundId">rbxassetid://11721872281</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="143">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_09</string>
+          <string name="SoundId">rbxassetid://11721872129</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="144">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_12</string>
+          <string name="SoundId">rbxassetid://11721872226</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="145">
+        <Properties>
+          <string name="Name">ui_menu_button_confirm_11</string>
+          <string name="SoundId">rbxassetid://11721872188</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="146">
+      <Properties>
+        <string name="Name">Fail</string>
+      </Properties>
+      <Item class="Sound" referent="147">
+        <Properties>
+          <string name="Name">A</string>
+          <string name="SoundId">rbxassetid://11721872485</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="148">
+      <Properties>
+        <string name="Name">Alert</string>
+      </Properties>
+      <Item class="SoundGroup" referent="149">
+        <Properties>
+          <string name="Name">Error</string>
+        </Properties>
+        <Item class="Sound" referent="150">
+          <Properties>
+            <string name="Name">C</string>
+            <string name="SoundId">rbxassetid://11721870203</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="151">
+          <Properties>
+            <string name="Name">A</string>
+            <string name="SoundId">rbxassetid://11721870144</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="152">
+          <Properties>
+            <string name="Name">B</string>
+            <string name="SoundId">rbxassetid://11721870175</string>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Sound" referent="153">
+        <Properties>
+          <string name="Name">Ringtone</string>
+          <string name="SoundId">rbxassetid://11721870455</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="154">
+        <Properties>
+          <string name="Name">Gentle</string>
+          <string name="SoundId">rbxassetid://11721870340</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="155">
+        <Properties>
+          <string name="Name">Intense</string>
+          <string name="SoundId">rbxassetid://11721870357</string>
+        </Properties>
+      </Item>
+      <Item class="Sound" referent="156">
+        <Properties>
+          <string name="Name">Simple</string>
+          <string name="SoundId">rbxassetid://11721870485</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="SoundGroup" referent="157">
+      <Properties>
+        <string name="Name">Hero</string>
+      </Properties>
+      <Item class="SoundGroup" referent="158">
+        <Properties>
+          <string name="Name">Simple</string>
+        </Properties>
+        <Item class="Sound" referent="159">
+          <Properties>
+            <string name="Name">C</string>
+            <string name="SoundId">rbxassetid://12017249919</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="160">
+          <Properties>
+            <string name="Name">A</string>
+            <string name="SoundId">rbxassetid://12017249837</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="161">
+          <Properties>
+            <string name="Name">B</string>
+            <string name="SoundId">rbxassetid://12017249877</string>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="SoundGroup" referent="162">
+        <Properties>
+          <string name="Name">Decorative</string>
+        </Properties>
+        <Item class="Sound" referent="163">
+          <Properties>
+            <string name="Name">C</string>
+            <string name="SoundId">rbxassetid://12017249793</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="164">
+          <Properties>
+            <string name="Name">A</string>
+            <string name="SoundId">rbxassetid://11721872520</string>
+          </Properties>
+        </Item>
+        <Item class="Sound" referent="165">
+          <Properties>
+            <string name="Name">B</string>
+            <string name="SoundId">rbxassetid://11721872550</string>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="Sound" referent="166">
+      <Properties>
+        <string name="Name">Refresh</string>
+        <string name="SoundId">rbxassetid://12017250675</string>
+      </Properties>
+    </Item>
+  </Item>
+</roblox>
