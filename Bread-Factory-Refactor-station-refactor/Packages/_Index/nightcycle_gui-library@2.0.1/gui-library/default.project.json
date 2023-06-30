@@ -1,0 +1,12 @@
+{
+  "name": "gui-library",
+  "tree": {
+    "$path": "src",
+    "PseudoEnum": {
+      "$path": "out/PseudoEnum.luau"
+    },
+    "StyleGuide": {
+      "$path": "out/StyleGuide"
+    }
+  }
+}

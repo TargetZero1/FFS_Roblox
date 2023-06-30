@@ -1,0 +1,157 @@
+
+
+.headline1 {
+	font-family: 'LuckiestGuy';
+	font-size: 96px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: wrap;
+}
+
+.headline2 {
+	font-family: 'LuckiestGuy';
+	font-size: 64px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: wrap;
+}
+
+.headline3 {
+	font-family: 'LuckiestGuy';
+	font-size: 56px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: clip;
+}
+
+.headline4 {
+	font-family: 'LuckiestGuy';
+	font-size: 48px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: clip;
+}
+
+.headline5 {
+	font-family: 'LuckiestGuy';
+	font-size: 44px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: clip;
+}
+
+.headline6 {
+	font-family: 'LuckiestGuy';
+	font-size: 40px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: clip;
+}
+
+.subtitle1 {
+	font-family: 'LuckiestGuy';
+	font-size: 36px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: clip;
+}
+
+.subtitle2 {
+	font-family: 'LuckiestGuy';
+	font-size: 32px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: clip;
+}
+
+.button {
+	font-family: 'Cartoon';
+	font-size: 30px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: clip;
+}
+
+.body1 {
+	font-family: 'Cartoon';
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: clip;
+}
+
+.body2 {
+	font-family: 'Cartoon';
+	font-size: 22px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: clip;
+}
+
+.caption {
+	font-family: 'Ubuntu';
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: clip;
+}
+
+.overline {
+	font-family: 'Ubuntu';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-overflow: clip;
+}
+
+.spacing {
+	border-width: 4px;
+	padding: 12px;
+	border-radius: 8px;
+}
+
+.primary {
+	background-color: rgb(171, 128, 238);
+}
+
+.secondary {
+	background-color: rgb(47, 190, 201);
+}
+
+.tertiary {
+	background-color: rgb(22, 134, 51);
+}
+
+.background {
+	background-color:rgb(198, 130, 93);
+}
+
+.error {
+	background-color: #ff0000;
+}
+
+.warn {
+	background-color: #ff930d;
+}
+
+.gain {
+	background-color: #29c000;
+}
+
+.loss {
+	background-color: #f30025;
+}
+

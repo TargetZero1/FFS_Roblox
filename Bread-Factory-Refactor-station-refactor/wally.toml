@@ -1,0 +1,18 @@
+[package]
+name = "do-not-publish/xyz"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Maid = "nightcycle/maid@1.1.4"
+Signal = "nightcycle/signal@1.0.2"
+NetworkUtil = "nightcycle/network-util@1.7.0"
+TableUtil = "nightcycle/table-util@1.1.0"
+GeometryUtil = "nightcycle/geometry-util@1.1.1"
+CurveUtil = "nightcycle/curve-util@1.0.0"
+GuiLibrary = "nightcycle/gui-library@2.0.1"
+Synthetic = "nightcycle/synthetic@5.0.0"
+ColdFusion8 = "nightcycle/cold-fusion@8.0.0"
+ServiceProxy = "nightcycle/service-proxy@1.0.0"
+Draw = "nightcycle/draw@1.0.6"

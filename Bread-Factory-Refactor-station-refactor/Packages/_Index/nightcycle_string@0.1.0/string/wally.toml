@@ -1,0 +1,10 @@
+[package]
+name = "nightcycle/string"
+description = "a basic port of the string lua library, except you can use tables as custom symbols for ez marking"
+version = "0.1.0"
+authors = ["CJ Oyer <coyer@nightcycle.us>"]
+realm = "shared"
+registry = "https://github.com/upliftgames/wally-index"
+exclude = ["Packages", ".vscode"]
+
+[dependencies]
