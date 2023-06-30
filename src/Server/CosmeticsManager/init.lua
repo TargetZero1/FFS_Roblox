@@ -5,7 +5,6 @@ local DatastoreServiece = game:GetService("DataStoreService")
 
 -- Packages
 -- Modules
-local Config = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("Config"))
 -- Types
 export type CosmeticData = {
 	Unlocked: boolean,
@@ -53,11 +52,8 @@ export type PlayerData = {
 	VFX: VFXData,
 }
 -- Constants
-local DATASTORE_NAME = Config.Datastore
-
 -- Variables
-
-local PlayerData = DatastoreServiece:GetDataStore(DATASTORE_NAME)
+local PlayerData = DatastoreServiece:GetDataStore("PlayerData_2.0")
 local SessionData: { [number]: PlayerData } = {}
 -- References
 local PlayerAdded = Instance.new("BindableEvent")

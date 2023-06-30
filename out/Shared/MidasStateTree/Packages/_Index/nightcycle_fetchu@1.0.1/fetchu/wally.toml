@@ -1,8 +1,0 @@
-[package]
-name = "nightcycle/fetchu"
-description = "imacodr's lightweight http caller"
-version = "1.0.1"
-authors = ["imacodr <https://github.com/imacodr>"]
-realm = "shared"
-registry = "https://github.com/upliftgames/wally-index"
-exclude = [".vscode"]

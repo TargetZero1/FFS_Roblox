@@ -29,7 +29,6 @@ local ASSIGN_PET_EVENT = "AssignPetToStation"
 local DELETE_PET_EVENT = "DeletePet"
 local MERGE_PETS_EVENT = "MergePets"
 local ON_ANIM_PLAY = "OnAnimPlay"
-local GET_IF_MANAGING = "GetIfManaging"
 -- Variables
 -- References
 -- Class
@@ -66,8 +65,6 @@ function getUpdatedState<T>(maid: Maid, componentName: string?, getKey: string, 
 	end, StateSource)
 end
 
-local isPetInventoryOpen = false
-
 function boot(maid: Maid, componentName: string)
 	local _fuse = ColdFusion.fuse(maid)
 
@@ -94,9 +91,7 @@ function boot(maid: Maid, componentName: string)
 	local petInventory = maid:GiveTask(PetInventory(maid, PetsData, PetSelection, MergeTarget, OnEquip, OnMerge, OnDelete, OnSelect)) :: Frame
 	petInventory.Parent = screenGui
 
-	isPetInventoryOpen = true
 	ExitButton(petInventory, function()
-		isPetInventoryOpen = false
 		maid:Destroy()
 	end, _Value(true))
 
@@ -203,8 +198,4 @@ NetworkUtil.onClientInvoke(ON_ANIM_PLAY, function(_Animator: Animator, animation
 		_maid:Destroy()
 	end))
 	return nil
-end)
-
-NetworkUtil.onClientInvoke(GET_IF_MANAGING, function()
-	return isPetInventoryOpen
 end)

@@ -3,8 +3,7 @@
 -- Packages
 -- Modules
 local Station = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("Components"):WaitForChild("Station"))
-local MidasStateTree = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("MidasStateTree"))
-local StationModifierUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("StationModifierUtil"))
+
 -- Types
 -- Constants
 -- Variables
@@ -40,22 +39,6 @@ function Windmill.new(owner: Player, instance: Model, petSpawnCF: CFrame): Windm
 
 	self.OnFire:Connect(function()
 		self:_PlayDropSoundEffect(SFXEvent)
-	end)
-
-	MidasStateTree.Tycoon.Windmill.Level.Value(owner, function(): number?
-		local balanceId = self.ModifierId.Value
-		if balanceId then
-			return StationModifierUtil.getLevel(balanceId)
-		end
-		return nil
-	end)
-
-	MidasStateTree.Tycoon.Windmill.Level.Recharge(owner, function(): number?
-		local balanceId = self.ModifierId.Recharge
-		if balanceId then
-			return StationModifierUtil.getLevel(balanceId)
-		end
-		return nil
 	end)
 
 	return self

@@ -1,9 +1,9 @@
 --!strict
 -- Services
--- local PathfindingService = game:GetService("PathfindingService")
+local PathfindingService = game:GetService("PathfindingService")
 
 -- Packages
--- local GeometryUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("GeometryUtil"))
+local GeometryUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("GeometryUtil"))
 local Maid = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Maid"))
 -- local Draw = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Draw"))
 
@@ -24,20 +24,20 @@ local BEAM_OFFSET = 3
 local BEAM_COLOR = Color3.fromHSV(0.125,1,1)
 -- Variables
 -- References
--- local Path = PathfindingService:CreatePath({
--- 	AgentRadius = 8,
--- 	AgentHeight = 7,
--- 	AgentCanJump = true,
--- 	AgentCanClimb = false,
--- 	WaypointSpacing = 2,
--- 	Costs = {
--- 		Plastic = 1,
--- 		Slate = 1,
--- 		Mud = 1,
--- 		Grass = 100,
--- 		Foil = 1000,
--- 	},
--- })
+local Path = PathfindingService:CreatePath({
+	AgentRadius = 8,
+	AgentHeight = 7,
+	AgentCanJump = true,
+	AgentCanClimb = false,
+	WaypointSpacing = 2,
+	Costs = {
+		Plastic = 1,
+		Slate = 1,
+		Mud = 1,
+		Grass = 100,
+		Foil = 1000,
+	},
+})
 -- Private Functions
 -- function fromBuildCFrame(cf: CFrame): CFrame
 -- 	return cf * CFrame.Angles(0, math.rad(-90), 0) * CFrame.Angles(0, 0, math.rad(-90))
@@ -50,52 +50,52 @@ end
 local ArrowUtil = {}
 
 function ArrowUtil.pathFind(origin: Vector3, goal: Vector3): {[number]: Vector3}
-	-- -- origin *= Vector3.new(1,0,1)
-	-- -- origin += Vector3.new(0,CONSTANT_HEIGHT,0)
+	-- origin *= Vector3.new(1,0,1)
+	-- origin += Vector3.new(0,CONSTANT_HEIGHT,0)
 
-	-- -- goal *= Vector3.new(1,0,1)
-	-- -- goal += Vector3.new(0,CONSTANT_HEIGHT,0)
+	-- goal *= Vector3.new(1,0,1)
+	-- goal += Vector3.new(0,CONSTANT_HEIGHT,0)
 
-	-- local function smoothPath(points: {[number]: Vector3}): {[number]: Vector3}
-	-- 	for i, point in ipairs(points) do
-	-- 		local targetPoint = points[i+1]
-	-- 		local referencePoint = points[i+2]
-	-- 		if targetPoint and referencePoint then
-	-- 			local targetNormal = (targetPoint - point).Unit
-	-- 			local referenceNormal = (referencePoint - targetPoint).Unit
-	-- 			local angle = GeometryUtil.getAngleBetweenTwoLines(
-	-- 				{
-	-- 					point*Vector3.new(1,0,1), 
-	-- 					point*Vector3.new(1,0,1) + targetNormal*Vector3.new(1,0,1)
-	-- 				}, 
-	-- 				{
-	-- 					point*Vector3.new(1,0,1), 
-	-- 					point*Vector3.new(1,0,1) + referenceNormal*Vector3.new(1,0,1)
-	-- 				}
-	-- 			)
-	-- 			if angle <= math.rad(1) then
-	-- 				local copy = table.clone(points)
-	-- 				table.remove(copy, i+1)
-	-- 				return smoothPath(copy)
-	-- 			end
-	-- 		end
-	-- 	end
-	-- 	return points
-	-- end
-	-- local success, errorMessage = pcall(function()
-	-- 	Path:ComputeAsync(origin, goal)
-	-- end)
-	-- if success and Path.Status == Enum.PathStatus.Success then
-	-- 	-- Get the path waypoints
-	-- 	local waypoints = Path:GetWaypoints()
-	-- 	local points = {}
-	-- 	for i, waypoint in ipairs(waypoints) do
-	-- 		table.insert(points, waypoint.Position)
-	-- 	end
-	-- 	return smoothPath(points)
-	-- else
-	-- 	warn(tostring(errorMessage))
-	-- end
+	local function smoothPath(points: {[number]: Vector3}): {[number]: Vector3}
+		for i, point in ipairs(points) do
+			local targetPoint = points[i+1]
+			local referencePoint = points[i+2]
+			if targetPoint and referencePoint then
+				local targetNormal = (targetPoint - point).Unit
+				local referenceNormal = (referencePoint - targetPoint).Unit
+				local angle = GeometryUtil.getAngleBetweenTwoLines(
+					{
+						point*Vector3.new(1,0,1), 
+						point*Vector3.new(1,0,1) + targetNormal*Vector3.new(1,0,1)
+					}, 
+					{
+						point*Vector3.new(1,0,1), 
+						point*Vector3.new(1,0,1) + referenceNormal*Vector3.new(1,0,1)
+					}
+				)
+				if angle <= math.rad(1) then
+					local copy = table.clone(points)
+					table.remove(copy, i+1)
+					return smoothPath(copy)
+				end
+			end
+		end
+		return points
+	end
+	local success, errorMessage = pcall(function()
+		Path:ComputeAsync(origin, goal)
+	end)
+	if success and Path.Status == Enum.PathStatus.Success then
+		-- Get the path waypoints
+		local waypoints = Path:GetWaypoints()
+		local points = {}
+		for i, waypoint in ipairs(waypoints) do
+			table.insert(points, waypoint.Position)
+		end
+		return smoothPath(points)
+	else
+		warn(tostring(errorMessage))
+	end
 
 	return {origin, origin:Lerp(goal, 0.5), goal}
 	

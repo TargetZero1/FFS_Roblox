@@ -14,8 +14,6 @@ local BreadManager = require(game:GetService("ServerScriptService"):WaitForChild
 local ReferenceUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("ReferenceUtil"))
 local RewardData = require(game:GetService("ReplicatedStorage"):WaitForChild("Balancing"):WaitForChild("RewardData"))
 local Pets = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("Pets"))
-local MidasStateTree = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("MidasStateTree"))
-local Config = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("Config"))
 
 -- Types
 type Maid = Maid.Maid
@@ -27,8 +25,7 @@ local UPDATE_VERSION = 0.1
 local SECONDS_IN_DAY = 60*60*24
 
 -- Variables
-local DATASTORE_NAME = Config.Datastore
-local PlayerData = DataStoreService:GetDataStore(DATASTORE_NAME)
+local PlayerData = DataStoreService:GetDataStore("PlayerData_2.0")
 local maid = Maid.new()
 -- References
 local BindableEvents = ReplicatedStorage:WaitForChild("BindableEvents")
@@ -137,13 +134,6 @@ function displayAFK(player: Player): ()
 		assert(rewardData, "'rewardData' assertion failed")
 
 		afkMoney = rewardData.Amount
-		MidasStateTree.DayReward(player, function()
-			return rewardData.Amount
-		end)
-	else
-		MidasStateTree.DayReward(player, function()
-			return 0
-		end)
 	end
 
 	if afkMoney > 0 then

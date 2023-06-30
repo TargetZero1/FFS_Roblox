@@ -10,4 +10,3 @@ luau-lsp = {source="JohnnyMorganz/luau-lsp", version="1.20.2"}
 run-in-roblox = { source = "rojo-rbx/run-in-roblox", version = "0.3.0" }
 style-guide = {source = "nightcycle/style-guide", version = "0.1.19"}
 pseudo-enum = {source = "nightcycle/pseudo-enum", version = "0.2.2"}
-midas = {source = "nightcycle/midas-clt", version = "2.1.2"}

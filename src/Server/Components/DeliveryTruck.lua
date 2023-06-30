@@ -18,7 +18,6 @@ local TextUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shar
 local BreadDropUtil = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("BreadDropUtil"))
 local MultiplierUtil = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("MultiplierUtil"))
 local BreadManager = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("BreadManager"))
-local MidasStateTree = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("MidasStateTree"))
 
 -- Types
 type DropData = BreadDropUtil.DropData
@@ -27,7 +26,6 @@ export type DeliveryTruck = {
 	__index: DeliveryTruck,
 	_Maid: Maid,
 	_IsAlive: boolean,
-	_DeliveryCount: number,
 	Queue: { [number]: DropData },
 	RespawnTime: number,
 	TruckActive: boolean,
@@ -101,10 +99,6 @@ function DeliveryTruck.new(owner: Player, instance: Model): DeliveryTruck
 	self._IsAlive = true
 	self.Owner = owner
 	self.Instance = instance
-	self._DeliveryCount = 0
-	MidasStateTree.Tycoon.Truck.DeliveryCount(owner, function()
-		return self._DeliveryCount
-	end)
 	self.RespawnTime = 2
 	self.TruckActive = true
 	self._TouchDebounce = true
@@ -395,10 +389,10 @@ function DeliveryTruck:FinishDelivery(player: Player)
 	PlayerManager.setMoney(player, playerMoney + paymentMoney)
 
 	--increase the total amount of money this player has earned
-	-- PlayerManager.setTotalMoney(player, PlayerManager.getTotalMoney(player) + paymentMoney)
+	PlayerManager.setTotalMoney(player, PlayerManager.getTotalMoney(player) + paymentMoney)
 
 	--increase the total amount of money the player has earned in this rebirth
-	-- PlayerManager.setCareerCash(player, PlayerManager.getCareerCash(player) + paymentMoney)
+	PlayerManager.setCareerCash(player, PlayerManager.getCareerCash(player) + paymentMoney)
 
 	--check if player has muted the SFX
 	if self.Owner:GetAttribute("MuteSFX") ~= nil then
@@ -464,24 +458,12 @@ function DeliveryTruck:Press(player)
 			if #self.Queue > 0 then
 				NetworkUtil.fireClient(ON_DELIVER, self.Owner)
 
-				local lastCount = #self.Queue
-				local lastValue = 0
-	
 				for i, data: DropData in ipairs(self.Queue) do
-					lastValue += data.Value
 					local setKey = `setBreadType{data.TypeIndex}`
 					if BreadManager[setKey] then
 						BreadManager[setKey](player, 1, data.Value)
 					end
 				end
-
-				MidasStateTree.Tycoon.Truck.LastDelivery.Count(self.Owner, function()
-					return lastCount
-				end)
-				MidasStateTree.Tycoon.Truck.LastDelivery.Value(self.Owner, function()
-					return lastValue
-				end)
-				self._DeliveryCount += 1
 
 				--self.Midas:Fire("StartDelivery")
 				--check if player has muted the SFX

@@ -25,12 +25,12 @@ PRODUCTS = {
 			PlayerManager.setMoney(player, 1000)
 		end
 
-		-- --increase the total amount of money this player has earned
-		-- if PlayerManager.getTotalMoney(player) ~= nil then
-		-- 	PlayerManager.setTotalMoney(player, PlayerManager.getTotalMoney(player) + 1000)
-		-- else
-		-- 	PlayerManager.setTotalMoney(player, 1000)
-		-- end
+		--increase the total amount of money this player has earned
+		if PlayerManager.getTotalMoney(player) ~= nil then
+			PlayerManager.setTotalMoney(player, PlayerManager.getTotalMoney(player) + 1000)
+		else
+			PlayerManager.setTotalMoney(player, 1000)
+		end
 
 		--return the purchase was successful
 		return true

@@ -98,7 +98,7 @@ function Util.setValueLabel(instance: Instance)
 	assert(owner, `no user found with userId {data.UserId}`)
 
 	gui.Enabled = true -- owner:GetAttribute("LoafValueReader")
-	textLabel.Text = "$" .. FormatUtil.formatNumber(math.max(math.floor(data.Value), 1))
+	textLabel.Text = "$" .. FormatUtil.formatNumber(data.Value)
 end
 
 function Util.newDropPrompt(parent: BasePart, objectText: string | () -> string, actionText: string | () -> string, getCooldown: () -> number): Signal
@@ -107,7 +107,6 @@ function Util.newDropPrompt(parent: BasePart, objectText: string | () -> string,
 	--set up proximity prompt
 	local clickTick = 0
 	local prompt = Instance.new("ProximityPrompt")
-	prompt.Name = "DropTrigger"
 	maid:GiveTask(parent.Destroying:Connect(function()
 		maid:Destroy()
 	end))

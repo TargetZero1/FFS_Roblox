@@ -245,7 +245,6 @@ function boot(maid: Maid)
 	assert(catHatcher)
 
 	Onboarding.Quests.Hatch.Steps.GoTo:AddToFocus(catHatcher)
-	Onboarding.Quests.Hatch.Steps.Hatch:AddToFocus(catHatcher)
 end
 
 local maid = Maid.new()

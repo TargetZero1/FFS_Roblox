@@ -4,8 +4,6 @@
 local NetworkUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("NetworkUtil"))
 -- Modules
 local Station = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("Components"):WaitForChild("Station"))
-local MidasStateTree = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("MidasStateTree"))
-local StationModifierUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("StationModifierUtil"))
 
 -- Types
 -- Constants
@@ -53,26 +51,6 @@ function Kneader.new(owner: Player, instance: Model, petSpawnCF: CFrame): Kneade
 
 	self:_BuildPrompt("Dough", "Knead")
 
-	MidasStateTree.Tycoon.Kneader.Level.Multiplier(owner, function(): number?
-		local balanceId = self.ModifierId.Multiplier
-		if balanceId then
-			return StationModifierUtil.getLevel(balanceId)
-		end
-		return nil
-	end)
-
-	MidasStateTree.Tycoon.Kneader.Level.Recharge(owner, function(): number?
-		local balanceId = self.ModifierId.Recharge
-		if balanceId then
-			return StationModifierUtil.getLevel(balanceId)
-		end
-		return nil
-	end)
-
-	MidasStateTree.Tycoon.Kneader.PetBalanceId(owner, function(): any
-		return self._PetBalanceId or "None"
-	end)
-		
 	return self
 end
 

@@ -50,7 +50,7 @@ local TRANS_TWEEN_DURAITON = 0.5
 local BUTTON_DELAY = 0.2
 local GROW_WEIGHT = 0.25
 local HIGHLIGHT_OVERLAY_DISTANCE = 100
--- local ARROW_UPDATE_DELAY = 0.5
+local ARROW_UPDATE_DELAY = 0.5
 -- Variables
 -- References
 -- Private functions
@@ -75,7 +75,7 @@ function highlightInstance(hostMaid: Maid, inst: Instance, GlowColor: State<Colo
 	local Scale = _Value(1)
 	local IsVisible = _Value(false)
 	local DepthMode = _Value(Enum.HighlightDepthMode.Occluded)
-	-- local lastArrowUpdate = 0
+	local lastArrowUpdate = 0
 	maid:GiveTask(RunService.RenderStepped:Connect(function()
 		if not inst:IsDescendantOf(workspace) and not inst:IsDescendantOf(game:GetService("Players").LocalPlayer) then
 			IsVisible:Set(false)
@@ -95,9 +95,9 @@ function highlightInstance(hostMaid: Maid, inst: Instance, GlowColor: State<Colo
 				if character then
 					local primPart = character.PrimaryPart
 					if primPart then
-						if true then -- tick() - lastArrowUpdate > ARROW_UPDATE_DELAY then
+						if tick() - lastArrowUpdate > ARROW_UPDATE_DELAY then
 							-- print("Test")
-							-- lastArrowUpdate = tick()
+							lastArrowUpdate = tick()
 							local renderMaid = maid:GiveTask(Maid.new())
 							local container = ArrowUtil.getContainer(renderMaid)
 							local isDone = false

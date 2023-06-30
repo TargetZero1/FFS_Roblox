@@ -155,7 +155,7 @@ function loadTycoon(tycoonSpawn: BasePart, player: Player?, isRebirth: boolean?)
 	assert(getIfAvailable(tycoonSpawn) or isRebirth)
 	tycoonSpawn:SetAttribute(IS_LOADING_KEY, true)
 
-	local success, msg = pcall(function()
+	-- local success, msg = pcall(function()
 		-- clean tycoon
 		cleanUpTycoon(tycoonSpawn)
 
@@ -224,11 +224,11 @@ function loadTycoon(tycoonSpawn: BasePart, player: Player?, isRebirth: boolean?)
 
 			print(`Completed player loading {tycoonSpawn.Name}`)
 		end
-	end)
-	if not success then
-		warn(msg)
-		cleanUpTycoon(tycoonSpawn)
-	end
+	-- end)
+	-- if not success then
+	-- 	warn(msg)
+	-- 	cleanUpTycoon(tycoonSpawn)
+	-- end
 	
 	tycoonSpawn:SetAttribute(IS_LOADING_KEY, false)
 end
@@ -257,7 +257,7 @@ function tycoonCensus()
 end
 
 -- add players to a tycoon
-local function bootPlayer(player: Player)
+Players.PlayerAdded:Connect(function(player: Player)
 	-- try to spawn a player
 	local function attemptSpawn(): boolean
 		for i, tycoonSpawn in ipairs(workspace:WaitForChild("TycoonSpawns"):GetChildren()) do
@@ -276,11 +276,7 @@ local function bootPlayer(player: Player)
 	until attemptSpawn()
 
 	-- assert(attemptSpawn(), "something has gone very wrong with tycoon spawning")
-end
-Players.PlayerAdded:Connect(bootPlayer)
-for i, player in ipairs(Players:GetPlayers()) do
-	bootPlayer(player)
-end
+end)
 
 -- update tycoon
 for i, tycoonSpawn in ipairs(workspace:WaitForChild("TycoonSpawns"):GetChildren()) do

@@ -6,7 +6,6 @@ local DatastoreService = game:GetService("DataStoreService")
 local MarketplaceService = game:GetService("MarketplaceService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local CollectionService = game:GetService("CollectionService")
-
 -- Packages
 local TableUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("TableUtil"))
 local Signal = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Signal"))
@@ -19,8 +18,6 @@ local StationModifierUtil = require(game:GetService("ReplicatedStorage"):WaitFor
 local TimerRewardUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("TimerRewardUtil"))
 local Config = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("Config"))
 -- local GamepassUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("GamepassUtil"))
-local MidasStateTree = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("MidasStateTree"))
-local BalancingPetData = require(game:GetService("ReplicatedStorage"):WaitForChild("Balancing"):WaitForChild("PetData"))
 
 -- Types
 export type ComponentName = "Windmill" | "Oven" | "Rack" | "Kneader" | "Wrapper"
@@ -1021,24 +1018,6 @@ function PlayerManager.onPlayerAdded(player: Player)
 
 	-- boot reward data
 	PlayerManager.getTimerRewardSaveDataList(player)
-	for balanceId, _ in pairs(BalancingPetData) do
-		MidasStateTree.Pets[balanceId](player, function(): number?
-			local plrData = SessionData[userId]
-			if plrData then
-				local count = 0
-				for _, petData in pairs(plrData.PetRegistry) do
-					if petData.BalanceId == balanceId then
-						count += 1
-					end
-				end
-				if count > 0 then
-					return count
-				end
-			end
-			return nil
-		end)
-	end
-
 end
 
 function PlayerManager.onCharacterAdded(player: Player, character: Model)
@@ -1078,38 +1057,32 @@ function PlayerManager.onCharacterAdded(player: Player, character: Model)
 	end
 end
 
-function PlayerManager.getMoney(player: Player): number
+function PlayerManager.getMoney(player: Player)
 	--get the Players current money and give it back to them
-	return assert(SessionData[player.UserId].Money)
+	return SessionData[player.UserId].Money
 end
 
-function PlayerManager.setMoney(player: Player, value: number): ()
+function PlayerManager.setMoney(player: Player, value: number)
 	--check value exists
-	--set the session data money to the same value as the leaderstats when it updates
-	local delta = value - PlayerManager.getMoney(player)
-	
-	SessionData[player.UserId].Money = value
+	if value ~= nil then
+		--set the session data money to the same value as the leaderstats when it updates
+		SessionData[player.UserId].Money = value
 
-	--find leaderstats folder on player
-	local leaderstats = player:FindFirstChild("PlayerStats")
+		--find leaderstats folder on player
+		local leaderstats = player:FindFirstChild("PlayerStats")
 
-	--check leaderstats not invalid
-	if leaderstats ~= nil then
-		local money = leaderstats:FindFirstChild("Money") :: NumberValue?
-		--check the player has money
-		if money ~= nil then
+		--check leaderstats not invalid
+		if leaderstats ~= nil then
+			local money = leaderstats:FindFirstChild("Money") :: NumberValue?
 			--check the player has money
-			if money.Value >= 0 then
-				money.Value = value
+			if money ~= nil then
+				--check the player has money
+				if money.Value >= 0 then
+					money.Value = value
+				end
 			end
 		end
 	end
-
-	if delta > 0 then
-		PlayerManager.setTotalMoney(player, (PlayerManager.getTotalMoney(player) or 0) + delta)
-		PlayerManager.setCareerCash(player, (PlayerManager.getCareerCash(player) or 0) + delta)
-	end
-
 end
 
 function PlayerManager.getTotalMoney(player: Player): number
@@ -1117,7 +1090,7 @@ function PlayerManager.getTotalMoney(player: Player): number
 	return SessionData[player.UserId].TotalMoney
 end
 
-function PlayerManager.setTotalMoney(player: Player, value: number): ()
+function PlayerManager.setTotalMoney(player: Player, value: number)
 	--check value exists
 	if value ~= nil then
 		--set the session data money to the same value as the leaderstats when it updates
@@ -1529,8 +1502,6 @@ function PlayerManager.savePet(player: Player, petSaveData: PetSaveData)
 			end
 		end
 	end
-
-
 	PetSignalRegistry[player.UserId]:Fire(petSaveData)
 end
 
@@ -1819,14 +1790,6 @@ function PlayerManager.onPlayerRemoving(player: Player)
 	PlayerRemoving:Fire(player)
 end
 
-function PlayerManager.getOnboardingData(player: Player): OnboardingData?
-	local plrData = SessionData[player.UserId]
-	if plrData then
-		return TableUtil.deepCopy(plrData.Onboarding)
-	end
-	return nil
-end
-
 function PlayerManager.onClose()
 	--debug to stop firing in studio
 	if game:GetService("RunService"):IsStudio() then
@@ -1883,12 +1846,13 @@ end)
 
 AFKRewardEvent.Event:Connect(function(player: Player, rewardValue: number)
 	--get the current Players money and increase by whatever is the reward value
+	local Money = PlayerManager.getMoney(player) + rewardValue
 
 	--save the new value
-	PlayerManager.setMoney(player, PlayerManager.getMoney(player) + rewardValue)
+	PlayerManager.setMoney(player, Money)
 
 	--save the new value
-	-- PlayerManager.setTotalMoney(player, PlayerManager.getTotalMoney(player) + rewardValue)
+	PlayerManager.setTotalMoney(player, PlayerManager.getTotalMoney(player) + rewardValue)
 end)
 
 --Bind the invoke to player manager.

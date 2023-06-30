@@ -2,7 +2,6 @@
 -- Services
 local CollectionService = game:GetService("CollectionService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local RunService = game:GetService("RunService")
 
 -- Packages
 local Maid = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Maid"))
@@ -43,7 +42,6 @@ export type Tycoon = {
 	__index: Tycoon,
 	_Maid: Maid,
 	_IsAlive: boolean,
-	_IsRebirthing: boolean,
 	_Spawn: BasePart,
 	_TopicEvent: BindableEvent,
 	Owner: Player,
@@ -90,8 +88,7 @@ function Tycoon.new(player: Player, spawnPoint: BasePart, model: Model): Tycoon
 	local self: Tycoon = setmetatable({}, Tycoon) :: any
 	self._Maid = Maid.new()
 	self._IsAlive = true
-	self._IsRebirthing = false
-
+	
 	self.Owner = player
 	self._Spawn = spawnPoint
 	self.Instance = model
@@ -137,10 +134,7 @@ function Tycoon.new(player: Player, spawnPoint: BasePart, model: Model): Tycoon
 	end
 
 	self._Maid:GiveTask(self.Components.RebirthButton.OnClick:Connect(function()
-		if self._IsRebirthing then return end
-		self._IsRebirthing = true
 		PlayerManager.setRebirths(player, assert(PlayerManager.getRebirths(player))+1)
-		PlayerManager.resetData(player)
 		self.OnRebirth:Fire()
 	end))
 
@@ -157,13 +151,6 @@ function Tycoon.new(player: Player, spawnPoint: BasePart, model: Model): Tycoon
 		end
 	end))
 	
-	local lastUpdate = tick()
-	self._Maid:GiveTask(RunService.Heartbeat:Connect(function(deltaTime: number)
-		if tick() - lastUpdate > 1 then
-			self.Components.RebirthProgressBoard:CheckAvailable()
-		end
-	end))
-
 	return self
 end
 

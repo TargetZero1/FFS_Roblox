@@ -364,7 +364,7 @@ return function(trackerMaid: Maid, parent: Instance)
 
 		tracer:GetClickState(button):Connect(function(val: boolean)
 			IsClicking:Set(val)
-			if not val and IsHovering:Get() and TransparencyBase:Get() == 0 then
+			if not val and IsHovering:Get() then
 				onClick:Fire(petClass, color)
 			end
 		end)

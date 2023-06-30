@@ -16,12 +16,6 @@
         "$path": "src/Shared",
 	   "PseudoEnum": {
 		"$path": "out/Shared/PseudoEnum.lua"
-	   },
-	   "MidasEventTree": {
-		"$path": "out/Shared/MidasEventTree"
-	   },
-	   "MidasStateTree": {
-		"$path": "out/Shared/MidasStateTree"
 	   }
       },
 	 "Balancing": {
@@ -40,9 +34,6 @@
 	   },
 	   "StyleGuide": {
 		"$path": "out/Client/StyleGuide"
-	   },
-	   "Analytics": {
-		"$path": "out/Client/Analytics"
 	   }
       }
     },
@@ -51,10 +42,7 @@
       "$className":"ServerScriptService",
       "Server": {
         "$className": "Folder",
-        "$path": "src/Server",
-	   "Analytics": {
-		"$path": "out/Server/Analytics"
-	   }
+        "$path": "src/Server"
       }
     },
     "StarterGui": {

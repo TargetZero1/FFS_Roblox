@@ -14,7 +14,6 @@ local BreadDropUtil = require(game:GetService("ServerScriptService"):WaitForChil
 local StationModifierUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("StationModifierUtil"))
 local PetBuilder = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("PetBuilder"))
 local SkinUtil = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("SkinUtil"))
-local MidasStateTree = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("MidasStateTree"))
 
 -- Types
 type Maid = Maid.Maid
@@ -103,16 +102,6 @@ function Rack.new(owner: Player, instance: Model, petSpawnCF: CFrame): Rack
 	self.ModifierId = {
 		Storage = StationModifierUtil.getId("Rack", "Storage", PlayerManager.getModifierLevel(self.Owner, "Rack", "Storage")),
 	}
-
-	MidasStateTree.Tycoon.Rack.Level.Storage(owner, function(): number?
-		local balanceId = self.ModifierId.Storage
-		if balanceId then
-			return StationModifierUtil.getLevel(balanceId)
-		end
-		return nil
-	end)
-		
-
 	-- self.Instance:SetAttribute("StorageId", ModifierUtil.getLevel(self.ModifierId.Storage))
 	-- self.Instance:GetAttributeChangedSignal("StorageId"):Connect(function()
 	-- 	local lvl = assert(self.Instance:GetAttribute("StorageId"))

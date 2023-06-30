@@ -8,8 +8,6 @@ local Signal = require(game:GetService("ReplicatedStorage"):WaitForChild("Packag
 
 -- Modules
 local ReferenceUtil = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("ReferenceUtil"))
-local MidasEventTree = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("MidasEventTree"))
-local MidasStateTree = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("MidasStateTree"))
 
 -- Types
 type Maid = Maid.Maid
@@ -63,19 +61,15 @@ function RebirthButton.new(owner: Player, part: BasePart): RebirthButton
 		self:OnTouched(...)
 	end))
 
-	MidasStateTree.Rebirths.IsUnlocked(owner, function(): boolean
-		return self._IsUnlocked
-	end)
 	--give back a copy of the table
 	return self
 end
 
 function RebirthButton:Unlock()
-	if self._IsUnlocked then
-		return
+	if not self._IsUnlocked then
+
 	end
 	self._IsUnlocked = true
-	self.Instance.Transparency = 0
 end
 
 function RebirthButton:Press(player: Player)
@@ -83,7 +77,6 @@ function RebirthButton:Press(player: Player)
 	--save a reference to the buttons Id for what it unlocks
 	--check if player who interacts with the button is the owner of this tycoon and they have the money necessary to buy it
 	if player == self.Owner then
-		MidasEventTree.Rebirths.Count(self.Owner)
 		--check if the truck is currently out for delivery
 		if self.Owner:GetAttribute("TruckDelivering") ~= nil then
 			--wait until it has returned before progressing

@@ -4,7 +4,6 @@ content_dir_path=$1
 luau-lsp analyze $content_dir_path \
 --sourcemap=sourcemap.json \
 --ignore="Packages/**" \
---ignore="out/**" \
 --ignore="ColdFusion/**" \
 --flag:LuauTypeInferIterationLimit=0 \
 --flag:LuauCheckRecursionLimit=0 \

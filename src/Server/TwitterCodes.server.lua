@@ -128,11 +128,11 @@ RedeemCode.OnServerInvoke = function(player: Player, code: string)
 				PlayerManager.setMoney(player, PlayerManager.getMoney(player) + amountToGive)
 
 				--increase the total amount of money this player has earned
-				-- if PlayerManager.getTotalMoney(player) ~= nil then
-				-- 	PlayerManager.setTotalMoney(player, PlayerManager.getTotalMoney(player) + amountToGive)
-				-- else
-				-- 	PlayerManager.setTotalMoney(player, amountToGive)
-				-- end
+				if PlayerManager.getTotalMoney(player) ~= nil then
+					PlayerManager.setTotalMoney(player, PlayerManager.getTotalMoney(player) + amountToGive)
+				else
+					PlayerManager.setTotalMoney(player, amountToGive)
+				end
 
 				TwitterCodeStore:SetAsync(tostring(player.UserId), true)
 				return true
@@ -144,11 +144,11 @@ RedeemCode.OnServerInvoke = function(player: Player, code: string)
 				PlayerManager.setMoney(player, PlayerManager.getMoney(player) + amountToGive)
 
 				--increase the total amount of money this player has earned
-				-- if PlayerManager.getTotalMoney(player) ~= nil then
-				-- 	PlayerManager.setTotalMoney(player, PlayerManager.getTotalMoney(player) + amountToGive)
-				-- else
-				-- 	PlayerManager.setTotalMoney(player, amountToGive)
-				-- end
+				if PlayerManager.getTotalMoney(player) ~= nil then
+					PlayerManager.setTotalMoney(player, PlayerManager.getTotalMoney(player) + amountToGive)
+				else
+					PlayerManager.setTotalMoney(player, amountToGive)
+				end
 
 				TwitterCodeStore:SetAsync(tostring(player.UserId), true)
 				return true

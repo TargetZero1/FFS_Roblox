@@ -5,8 +5,6 @@ local Maid = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages
 -- Modules
 local PlayerManager = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("PlayerManager"))
 local TimerRewardUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("TimerRewardUtil"))
-local MidasStateTree = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("MidasStateTree"))
-
 -- Types
 type Maid = Maid.Maid
 -- Constants
@@ -90,50 +88,14 @@ Util.ATTRIBUTE_KEYS = ATTRIBUTE_KEYS
 function Util.get(player: Player): number
 	player:SetAttribute(TIMER_MULTIPLIER_DURATION, getTimedRewardDuration(player))
 
-
-
-	local rebirthAddition = getRebirthCount(player) * 0.2
-	local groupAddition = if getIfInGroup(player) then 0.2 else 0
-	local activeTimerMultiplier = if getIfActiveTimer(player) then 2 else 1
-	local doubleBreadMultiplier = if getIfDoubleBread(player) then 2 else 1
-	local globalTimerMultiplier = if getIfGlobalTimer(player) then 2 else 1
-	local timedRewardMultiplier = getTimedRewardMultiplier(player)
-
 	local netMultiplier = 1
-	netMultiplier += rebirthAddition
-	netMultiplier += groupAddition
-	netMultiplier *= activeTimerMultiplier
-	netMultiplier *= doubleBreadMultiplier
-	netMultiplier *= globalTimerMultiplier
-	netMultiplier *= timedRewardMultiplier
 
-	MidasStateTree.Multiplier.Total(player, function()
-		return netMultiplier
-	end)
-	
-	MidasStateTree.Multiplier.Additions.IsInGroup(player, function()
-		return groupAddition
-	end)
-
-	MidasStateTree.Multiplier.Additions.RebirthCount(player, function()
-		return rebirthAddition
-	end)
-	
-	MidasStateTree.Multiplier.Weights.ActiveTimer(player, function()
-		return activeTimerMultiplier
-	end)
-
-	MidasStateTree.Multiplier.Weights.DoubleBread(player, function()
-		return doubleBreadMultiplier
-	end)
-
-	MidasStateTree.Multiplier.Weights.GlobalTimer(player, function()
-		return globalTimerMultiplier
-	end)
-
-	MidasStateTree.Multiplier.Weights.TimedReward(player, function()
-		return timedRewardMultiplier
-	end)
+	netMultiplier += getRebirthCount(player) * 0.2
+	netMultiplier += if getIfInGroup(player) then 0.2 else 0
+	netMultiplier *= if getIfActiveTimer(player) then 2 else 1
+	netMultiplier *= if getIfDoubleBread(player) then 2 else 1
+	netMultiplier *= if getIfGlobalTimer(player) then 2 else 1
+	netMultiplier *= getTimedRewardMultiplier(player)
 
 	return netMultiplier
 end

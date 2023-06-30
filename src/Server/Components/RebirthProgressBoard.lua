@@ -11,7 +11,6 @@ local Signal = require(game:GetService("ReplicatedStorage"):WaitForChild("Packag
 -- Modules
 local ReferenceUtil = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("ReferenceUtil"))
 local PlayerManager = require(ServerScriptService:WaitForChild("Server"):WaitForChild("PlayerManager"))
-local FormatUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("FormatUtil"))
 
 -- Types
 type Maid = Maid.Maid
@@ -103,7 +102,7 @@ function RebirthProgressBoard:CheckAvailable()
 	local totalMoneyNeeded = _getChild(backgroundInst, "TotalMoneyNeeded") :: TextLabel
 	local barFrame = _getChild(backgroundInst, "Bar") :: GuiObject
 
-	totalMoneyEarned.Text = "Total Earned: " .. FormatUtil.money(money)
+	totalMoneyEarned.Text = "Total $ Earned: " .. money
 
 	--convert text to display $CostK
 	--round numbers down
@@ -111,17 +110,17 @@ function RebirthProgressBoard:CheckAvailable()
 		return assert(tonumber(string.format("%." .. (places or 0) .. "f", num)))
 	end
 
-	-- local costDisplay = ""
-	-- --is the cost in the millions?
-	-- if cost >= 1000000 then
-	-- 	--round to 2 decimal places
-	-- 	costDisplay = valueRound(cost / 1000000, 2) .. "M"
-	-- else
-	-- 	--how many thousands
-	-- 	costDisplay = valueRound(cost / 1000, 2) .. "K"
-	-- end
+	local costDisplay = ""
+	--is the cost in the millions?
+	if cost >= 1000000 then
+		--round to 2 decimal places
+		costDisplay = valueRound(cost / 1000000, 2) .. "M"
+	else
+		--how many thousands
+		costDisplay = valueRound(cost / 1000, 2) .. "K"
+	end
 
-	totalMoneyNeeded.Text = "Rebirth requires " .. FormatUtil.money(cost)
+	totalMoneyNeeded.Text = "Rebirth requires $" .. costDisplay
 
 	--the filler bar for inside the loading bar
 	local filler = _getChild(barFrame, "Filler") :: GuiObject

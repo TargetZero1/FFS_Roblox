@@ -6,7 +6,6 @@ local MarketplaceService = game:GetService("MarketplaceService")
 
 -- Packages
 local Maid = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Maid"))
-local NetworkUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("NetworkUtil"))
 
 -- Modules
 local ReferenceUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("ReferenceUtil"))
@@ -33,7 +32,6 @@ type UpgradeGui = {
 }
 
 -- Constants
-local GET_IF_UPGRADING = "GetIfUpgrading"
 -- Variables
 local CurrentConfigs: { [string]: GuiConfig } = {}
 -- References
@@ -229,18 +227,11 @@ function boot(playerGui: PlayerGui, maid: Maid)
 		return billboardGui, upgradeButton, upgradeName, upgradeAmount, modifierImage, descriptionBox
 	end
 
-	local lastUpdate = 0
-
-	NetworkUtil.onClientInvoke(GET_IF_UPGRADING, function()
-		return tick() - lastUpdate > 15
-	end)
-
 	local function updateUI(paramId: string?)
 		-- id = incrementId(id)
 
 		local function updateKey(gui_key: string)
 			if GUIs[gui_key] ~= nil then
-				lastUpdate = tick()
 				local buyConnect = GUIs[gui_key].BuyConnection
 				if buyConnect then
 					buyConnect:Disconnect()

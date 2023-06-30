@@ -6,7 +6,6 @@ local RunService = game:GetService("RunService")
 local Maid = require(ReplicatedStorage:WaitForChild("Packages"):WaitForChild("Maid"))
 local ColdFusion = require(ReplicatedStorage:WaitForChild("Client"):WaitForChild("ColdFusion"))
 local Signal = require(ReplicatedStorage:WaitForChild("Packages"):WaitForChild("Signal"))
-
 --modules
 local PetVisualUtil = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("PetVisualUtil"))
 local PetModifierUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("PetModifierUtil"))

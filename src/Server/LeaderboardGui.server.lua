@@ -18,6 +18,7 @@ type SaveData = {
 local RebirthTable: { [number]: SaveData }
 
 -- References
+-- local PlayerData = DatastoreService:GetDataStore("PlayerData")
 local BindableEvents = ReplicatedStorage:WaitForChild("BindableEvents")
 local GlobalLeaderboard = BindableEvents:WaitForChild("GlobalLeaderboard")
 local BreadLeaderboard = BindableEvents:WaitForChild("BreadLeaderboard")
@@ -114,10 +115,10 @@ function bootLeadboard(leaderboardPart: BasePart, updateEvent: BindableEvent, fo
 
 						--Set up UI infolocal content, isReady = Players:GetUserThumbnailAsync(p.UserId, thumbType, thumbSize)
 						local content, _isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
-						local profileIcon = assert(sample:WaitForChild("ProfileIcon", 10)) :: ImageLabel
-						local rankLabel = assert(sample:WaitForChild("RankLabel", 10)) :: TextLabel
-						local nameLabel = assert(sample:WaitForChild("NameLabel", 10)) :: TextLabel
-						local cashLabel = assert(sample:WaitForChild("CashLabel", 10)) :: TextLabel
+						local profileIcon = sample:WaitForChild("ProfileIcon") :: ImageLabel
+						local rankLabel = sample:WaitForChild("RankLabel") :: TextLabel
+						local nameLabel = sample:WaitForChild("NameLabel") :: TextLabel
+						local cashLabel = sample:WaitForChild("CashLabel") :: TextLabel
 
 						profileIcon.Image = content
 						profileIcon.Visible = true

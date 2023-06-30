@@ -7,7 +7,6 @@ local NetworkUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("P
 local PlayerManager = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("PlayerManager"))
 local TimerRewardUtil = require(game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("TimerRewardUtil"))
 local PetsPet = require(game:GetService("ServerScriptService"):WaitForChild("Server"):WaitForChild("Pets"):WaitForChild("Pet"))
-
 -- Types
 -- Constants
 local ON_REWARD_BASKET_OPEN = "OnOpenRewardBasket"

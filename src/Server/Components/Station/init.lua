@@ -208,21 +208,11 @@ end
 function Station:_BuildPrompt(objectText: string, actionText: string)
 
 	local function getCooldown()
-		if self._IsAlive then
-			return StationModifierUtil.getValue(self.ModifierId.Recharge, self.Owner, self._PetBalanceId)
-		else
-			warn("attempted to get cooldown from dead station")
-			return 1
-		end
+		return StationModifierUtil.getValue(self.ModifierId.Recharge, self.Owner, self._PetBalanceId)
 	end
 
 	local function getActionText()
-		if self._IsAlive then
-			return self.Instance:GetAttribute("Display") or actionText --assert(self.Instance:GetAttribute("Display")) :: string
-		else
-			warn("attempted to get action text from dead station")
-			return ""
-		end
+		return self.Instance:GetAttribute("Display") or actionText --assert(self.Instance:GetAttribute("Display")) :: string
 	end
 
 	local onPromptClick = BreadDropUtil.newDropPrompt(

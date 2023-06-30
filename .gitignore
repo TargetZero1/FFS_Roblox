@@ -11,11 +11,3 @@ tests/**
 
 # workspace files
 sourcemap.json
-analytics/auth.txt
-analytics/data.json
-analytics/output/*.json
-analytics/output/kpi/*.json
-
-
-# python env
-.envp
