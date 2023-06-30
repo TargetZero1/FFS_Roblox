@@ -19,6 +19,7 @@ local RedeemCode = RemoteFunctions:WaitForChild("RedeemCode") :: RemoteFunction
 
 local TwitterCodes = {
 	--code to input// Attribute on leaderstats to change // Amount to change by
+	Refactor = { "Money", 10000 :: any, GroupRequired = false } :: any,
 	Release = { "Money", 1000 :: any, GroupRequired = false } :: any,
 	NorthSea = { "Money", 100 :: any, GroupRequired = false } :: any,
 	--	Test = {"Money",0, GroupRequired = false},
