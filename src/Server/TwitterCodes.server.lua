@@ -18,9 +18,7 @@ local RedeemCode = RemoteFunctions:WaitForChild("RedeemCode") :: RemoteFunction
 --require players to have leaderstats
 
 local TwitterCodes = {
-	--codeto input// Attribute on leaderstats to change // Amount to change by
-	Test = { "Money", 1000000000000000000000 :: any, GroupRequired = false } :: any,
-	Test1 = { "Money", 1000000000000000000000 :: any, GroupRequired = false } :: any,
+	--code to input// Attribute on leaderstats to change // Amount to change by
 	Release = { "Money", 1000 :: any, GroupRequired = false } :: any,
 	NorthSea = { "Money", 100 :: any, GroupRequired = false } :: any,
 	--	Test = {"Money",0, GroupRequired = false},

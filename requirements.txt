@@ -1,5 +1,5 @@
 # Python Package Dependencies
-# Virtual Environment setup for Python Development. 
+# Virtual Environment setup for Python Development
 
 adal==1.2.7
 azure-core==1.27.1
