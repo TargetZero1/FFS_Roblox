@@ -1,4 +1,4 @@
-# Python Package Dependencies
+# Python Package Dependencies ( Required )
 # Virtual Environment setup for Python Development
 
 adal==1.2.7
