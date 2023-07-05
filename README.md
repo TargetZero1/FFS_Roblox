@@ -24,7 +24,7 @@ Craft mouthwatering bread, upgrade endlessly, and hatch adorable pets to assist 
 
 To play Bread Factory Tycoon, follow these steps:
 
-1. Download Roblox from <href> https://www.roblox.com/download
+1. Download Roblox from [https://www.roblox.com/download](https://www.roblox.com/download).
 
 ## Play on Roblox
 
