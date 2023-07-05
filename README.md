@@ -1,7 +1,6 @@
 # Bread Factory Tycoon
 
-
-🍞 **Welcome to Bread Factory Tycoon**, the ultimate game where you rise to the top by creating the most epic bread factory ever seen!
+🍞 Welcome to Bread Factory Tycoon, the ultimate game where you rise to the top by creating the most epic bread factory ever seen!
 
 Craft mouthwatering bread, upgrade endlessly, and hatch adorable pets to assist you in running the show. Immerse yourself in a tranquil park with soothing music as you build your bread empire.
 
@@ -25,4 +24,14 @@ Craft mouthwatering bread, upgrade endlessly, and hatch adorable pets to assist 
 
 To play Bread Factory Tycoon, follow these steps:
 
-1. Clone the repository to your local machine.
+1. Download Roblox from <href> https://www.roblox.com/download
+
+## Play on Roblox
+
+If you prefer to play Bread Factory Tycoon on Roblox, here's how you can do it:
+
+1. Go to the Roblox website or launch the Roblox application.
+2. Search for "Bread Factory Tycoon" in the Games section.
+3. Click on the game and press the "Play" button.
+4. Follow the on-screen instructions to start playing and enjoy your bread-making adventure!
+
