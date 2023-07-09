@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# WARNING YOU ONLY RUN THIS ONCE!
+# WARNING YOU ONLY RUN THIS ONCE, NEVER TWICE!
 foreman install
 sh scripts/wally.sh
 pip install virtualenv
