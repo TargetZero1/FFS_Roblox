@@ -23,4 +23,4 @@ pip install -r requirements.txt
 
 # then run
 # sh analytics/scripts/update.sh
-# works on unix
+# works on unix and windows(Git Bash)
