@@ -65,6 +65,9 @@ function getAssetIds(): {[number]: string}
 	for i, inst in ipairs(workspace:WaitForChild("Map"):WaitForChild("Placeholders"):GetDescendants()) do
 		processInstance(inst)
 	end
+	for i, inst in ipairs(workspace:WaitForChild("Map"):WaitForChild("Roads"):GetDescendants()) do
+		processInstance(inst)
+	end
 	-- for i, inst in ipairs(workspace:WaitForChild("Map"):GetDescendants()) do
 	-- 	processInstance(inst)
 	-- end
@@ -114,7 +117,7 @@ function displayMessage(screen: ScreenGui)
 end
 
 -- Class
-function boot()
+function _boot()
 	ReplicatedFirst:RemoveDefaultLoadingScreen()
 
 	repeat task.wait() until game:IsLoaded()
@@ -174,4 +177,4 @@ function boot()
 	loadScreen:Destroy()
 end
 
-boot()
+-- boot()
