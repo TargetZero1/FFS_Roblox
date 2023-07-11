@@ -1,8 +1,8 @@
 version:
   hotfix: 0
   major: 1
-  minor: 0
-  patch: 7
+  minor: 1
+  patch: 0
 build:
   midas_package_rbx_path: game/ReplicatedStorage/Packages/Midas
   client_boot_script_path: out/Client/Analytics.client.lua
@@ -530,4 +530,3 @@ tree:
     Rack:
       Level:
         Storage: integer?
-
