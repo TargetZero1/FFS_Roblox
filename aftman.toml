@@ -5,5 +5,4 @@
 [tools]
 rojo = "rojo-rbx/rojo@7.3.0"
 
-# Old Version
 # rojo = "rojo-rbx/rojo@6.2.0"
